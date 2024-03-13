@@ -1,0 +1,12 @@
+network:
+  hosts:
+    switchSt7:
+      ansible_host: 10.200.44.17
+  vars:  
+    ansible_ssh_user: kostroma-admin
+    ansible_ssh_password: rjcnhjvf-rjvfhjdj44
+    ansible_network_os: ios
+    ansible_key_auto_add: true
+    ansible_become: yes
+    ansible_become_metod: enable
+    ansible_bekome_pass: rjcnhjvf-rjvfhjdj44

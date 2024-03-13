@@ -1,0 +1,43 @@
+---
+
+- name: backup configuration
+#  hosts: network 
+  hosts: all
+  gather_facts: false
+  connection: network_cli
+
+  vars:  
+    ansible_ssh_user: kostroma-admin
+    ansible_ssh_password: rjcnhjvf-rjvfhjdj44
+    ansible_key_auto_add: true
+#    ansible_become: yes
+#    ansible_become_metod: enable
+#    ansible_bekome_pass: rjcnhjvf-rjvfhjdj44
+
+  tasks:
+#    - name: run show running-config on remote devices
+#      cli_command:
+#        command: show run
+#      register: config
+
+    - name: backup
+      ios_config:
+        backup: yes
+#        defaults: true
+#        backup_options:
+#          filename: backup.cfg
+#          dir_path: "/home/alex/network/backups/"
+      register: config
+            
+#    - name: print output to screen
+#      debug:
+#        var: config.stdout_lines
+#      
+#    - name: get timestamp
+#      command: date +%Y%m%d
+#      register: timestamp
+#        
+#    - name: save config
+#      copy:
+#        content: "{{ config.stdout }}"
+#        dest: "/home/alex/network/backups/sh_run_{{ inventory_hostname }}_{{ timestamp.stdout }}.txt"

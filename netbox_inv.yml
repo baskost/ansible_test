@@ -1,0 +1,14 @@
+---
+plugin: netbox.netbox.nb_inventory
+#api_endpoint: http://10.200.44.205:8000
+api_endpoint: http://10.200.44.254:80
+#token: '2b91b80b5126b149d1b1991769f54449686278a9'
+token: '69ce1636ae5c2dea807074a14d98cfcc56b5fa68'
+validate_certs: False
+config_context: False
+group_by:
+  - device_roles
+query_filters:
+  - role: switch
+compose:
+  ansible_network_os: platform.slug
