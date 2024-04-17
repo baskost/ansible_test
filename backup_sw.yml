@@ -6,19 +6,15 @@
   gather_facts: false
   connection: network_cli
 
-  vars:  
-    ansible_ssh_user: kostroma-admin
-    ansible_ssh_password: rjcnhjvf-rjvfhjdj44
-    ansible_key_auto_add: true
-#    ansible_become: yes
-#    ansible_become_metod: enable
-#    ansible_bekome_pass: rjcnhjvf-rjvfhjdj44
-
   tasks:
 #    - name: run show running-config on remote devices
 #      cli_command:
 #        command: show run
 #      register: config
+    
+    - name: datadump
+      cli_command: 
+        command: terminal datadump
 
     - name: backup
       ios_config:

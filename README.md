@@ -19,3 +19,5 @@ ansible-galaxy collection install cisco.ios
 2. Проверка создания инвентаря из NetBox: ansible-inventory --list -i netbox_inv.yml
 
 3. Запуск плейбука: ansible-playbook backup_sw.yml
+
+4. Для получения полного конфига с коммутаторов Cisco необходимо дополнительно ввести команду terminal datadump.
