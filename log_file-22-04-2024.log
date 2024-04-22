@@ -1,0 +1,21 @@
+
+PLAY [backup configuration] ****************************************************
+
+TASK [datadump] ****************************************************************
+ok: [switchSt5]
+ok: [switchSt1]
+ok: [switchSt6]
+ok: [switchSt7]
+
+TASK [backup] ******************************************************************
+changed: [switchSt7]
+changed: [switchSt5]
+changed: [switchSt1]
+changed: [switchSt6]
+
+PLAY RECAP *********************************************************************
+switchSt1                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+switchSt5                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+switchSt6                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+switchSt7                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

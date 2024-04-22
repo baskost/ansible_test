@@ -21,3 +21,8 @@ ansible-galaxy collection install cisco.ios
 3. Запуск плейбука: ansible-playbook backup_sw.yml
 
 4. Для получения полного конфига с коммутаторов Cisco необходимо дополнительно ввести команду terminal datadump.
+
+5. git remote -v
+   git add .
+   git commit -m "text"
+   git push

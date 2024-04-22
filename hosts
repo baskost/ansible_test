@@ -2,12 +2,12 @@ network:
   hosts:
     switchSt1:
       ansible_host: 10.200.44.11
-    switchSt7:
-      ansible_host: 10.200.44.17
     switchSt5:
       ansible_host: 10.200.44.51
     switchSt6:
       ansible_host: 10.200.44.12
+    switchSt7:
+      ansible_host: 10.200.44.17
   vars:  
     ansible_ssh_user: kostroma-admin
     ansible_ssh_password: rjcnhjvf-rjvfhjdj44
